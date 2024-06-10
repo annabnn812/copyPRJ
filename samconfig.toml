@@ -1,0 +1,11 @@
+version = 0.1
+[default.deploy.parameters]
+stack_name = "bitcoin-can-stack"
+resolve_s3 = true
+s3_prefix = "bitcoin-can-stack"
+region = "us-east-1"
+profile = "BitcoinCan"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "Env=\"dev\" S3BucketName=\"bitcoin-can-deploy-bucket\" CognitoUserPoolName=\"bitcoin-can-dev-userpool\" CognitoWebClientName=\"bitcoin-can-dev-webclient\""
+image_repositories = []
